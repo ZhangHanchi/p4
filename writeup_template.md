@@ -1,6 +1,4 @@
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+## Writeup 
 
 ---
 
@@ -22,7 +20,7 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/undist2.jpg "Undistorted"
 [image2]: ./output_images/test2.jpg "Road Transformed"
 [image3]: ./output_images/thresholded_binary-test2.jpg "Binary Example"
-[image4]: ./output_images/warped-test2.jpg "Warp Example"
+[image4]: ./output_images/wraped-test2.jpg "Warp Example"
 [image5]: ./output_images/lane_lines.jpg "Fit Visual"
 [image6]: ./output_images/result_test2.jpg "Output"
 [image7]: ./output_images/calibration2.jpg "Distored"
@@ -34,11 +32,6 @@ The goals / steps of this project are the following:
 
 ---
 
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
-
-You're reading it!
 
 ### Camera Calibration
 
@@ -101,4 +94,7 @@ Here's a [link to my video result](./project_result.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+When the color of ground turns from black to yellow, my detected lane lines tremble, because the color or gradient difference between lanes and ground wouldn't be obvious then. I think the following approches might work:
+1. using specific color value to extract yellow lanes. It might work with HSV model, but difficult with RGB.
+2. make a dynamic mask only collecting lane pixels based on previous detected lanes, so that other pixels won't get in warped image.
+
