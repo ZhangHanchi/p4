@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [image4]: ./output_images/warped-test2.jpg "Warp Example"
 [image5]: ./output_images/lane_lines.jpg "Fit Visual"
 [image6]: ./output_images/example_output.jpg "Output"
-[image7]: ./examples/result_test2.jpg "Distored"
+[image7]: ./output_images/result_test2.jpg "Distored"
 [video1]: ./project_result.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
